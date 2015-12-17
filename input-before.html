@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Css Example</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<h1>Rating Css Example</h1>
+
+<p>input:before ile şuan için sadece Chrome v.47 ve üzeri desteklemektedir.</p><br>
+
+<p>FontAwesome iconları ile</p>
+
+<div class="rating-css">
+    <input type="radio" value="1" class="fa fa-star" name="rating1">
+    <input type="radio" value="2" class="fa fa-star" name="rating1">
+    <input type="radio" value="3" class="fa fa-star" name="rating1" checked>
+    <input type="radio" value="4" class="fa fa-star" name="rating1">
+    <input type="radio" value="5" class="fa fa-star" name="rating1">
+</div>
+
+<div class="rating-css">
+    <input type="radio" value="1" class="fa fa-star-o" name="rating2">
+    <input type="radio" value="2" class="fa fa-star-o" name="rating2">
+    <input type="radio" value="3" class="fa fa-star-o" name="rating2" checked>
+    <input type="radio" value="4" class="fa fa-star-o" name="rating2">
+    <input type="radio" value="5" class="fa fa-star-o" name="rating2">
+</div>
+
+<div class="rating-css">
+    <input type="radio" value="1" class="fa fa-heart" name="rating3">
+    <input type="radio" value="2" class="fa fa-heart" name="rating3">
+    <input type="radio" value="3" class="fa fa-heart" name="rating3" checked>
+    <input type="radio" value="4" class="fa fa-heart" name="rating3">
+    <input type="radio" value="5" class="fa fa-heart" name="rating3">
+</div>
+
+<br>
+
+<p>CSS content ile</p>
+
+<div class="rating-css">
+    <input type="radio" value="1" class="custom" name="rating4">
+    <input type="radio" value="2" class="custom" name="rating4">
+    <input type="radio" value="3" class="custom" name="rating4" checked>
+    <input type="radio" value="4" class="custom" name="rating4">
+    <input type="radio" value="5" class="custom" name="rating4">
+</div>
+
+<style>
+    /* --------------------------------- */
+    /* PAGE CSS */
+    /* --------------------------------- */
+    body {
+        background-color: #242529;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        padding: 30px;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: normal;
+        margin: 0;
+    }
+
+    /* --------------------------------- */
+    /* RATING CSS */
+    /* --------------------------------- */
+
+    .rating-css {
+        cursor: pointer;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .rating-css input {
+        width: 0;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .rating-css input.custom:before {
+        content: "A";
+    }
+
+    .rating-css input:before {
+        display: inline-block;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 24px;
+        color: #3bb8f0;
+        text-shadow: 1px 1px 0 #000;
+    }
+
+    .rating-css input.fa-heart:before {
+        color: #ee2351;
+    }
+
+    .rating-css input:checked ~ input:before {
+        color: #555;
+    }
+
+</style>
+
+</body>
+</html>
